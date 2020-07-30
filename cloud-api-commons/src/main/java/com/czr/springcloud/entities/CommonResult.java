@@ -1,8 +1,11 @@
 package com.czr.springcloud.entities;
 
+import com.czr.springcloud.util.ArithUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
 
 /**
  * @author czr
@@ -21,5 +24,16 @@ public class CommonResult<T> {
     public CommonResult(Integer code,String message)    {
         this(code,message,null);
     }
+
+    /**
+     * 测试算法精度
+     */
+    // public static void main(String[] args) throws IllegalAccessException{
+    //     double d = ArithUtil.div(1, 10);
+    //     System.out.println(d);
+    //     System.out.println(Math.ceil(0.9));
+    //     double c = 5.6;
+    //     System.out.println(Math.ceil(c));
+    // }
 
 }
